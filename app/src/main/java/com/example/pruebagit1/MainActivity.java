@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button boton1;
+    Button boton1, boton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +18,20 @@ public class MainActivity extends AppCompatActivity {
 
         //Wiring Up
         boton1 = findViewById(R.id.button);
+        boton2 = findViewById(R.id.button2);
 
         //onClicks
         boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Boton 1 presionado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Que me anda picando culo", Toast.LENGTH_SHORT).show();
             }
         });
 
